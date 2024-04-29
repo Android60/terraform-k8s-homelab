@@ -1,0 +1,20 @@
+- name: Provision Kubernetes Cluster
+  hosts: all
+  become: true
+  gather_facts: true
+  roles:
+    - role: gadgieOps.ha-kubernetes
+      vars:
+      - taint_controllers: true
+      - set_host_kubeconfig: true
+      - host_kubeconfig_dest: ~/.kube/stage-homelab-config
+      - vrrp_virtual_ip: "192.168.100.201"
+      - haproxy_listen_port: "38080"
+      - kubernetes_version: '1.25'
+
+  pre_tasks:
+    - name: Install gnupg2
+      ansible.builtin.package:
+        name: "gnupg2"
+        state: present
+        update_cache: true
