@@ -1,0 +1,7 @@
+---
+- src: geerlingguy.containerd
+- src: geerlingguy.kubernetes
+- name: ansible-keepalived
+  src: https://github.com/evrardjp/ansible-keepalived.git
+- name: gadgieOps.ha-kubernetes
+  src: https://github.com/Android60/ansible-role-ha-kubernetes.git

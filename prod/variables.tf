@@ -76,5 +76,5 @@ variable "description" {
 variable "env" {
   description = "Environment for VM name"
   type        = string
-  default     = "stage"
+  default     = "prod"
 }
