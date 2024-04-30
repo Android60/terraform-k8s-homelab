@@ -13,6 +13,9 @@
       - kubernetes_version: '1.25'
 
   pre_tasks:
+    - name: Wait for /var/lib/dpkg/lock-frontend to be released 
+      shell: while lsof /var/lib/dpkg/lock-frontend ; do sleep 10; done;
+
     - name: Install gnupg2
       ansible.builtin.package:
         name: "gnupg2"
