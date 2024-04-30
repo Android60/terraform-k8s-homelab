@@ -7,8 +7,8 @@
       vars:
       - taint_controllers: true
       - set_host_kubeconfig: true
-      - host_kubeconfig_dest: ~/.kube/stage-homelab-config
-      - vrrp_virtual_ip: "192.168.100.201"
+      - host_kubeconfig_dest: ~/.kube/prod-homelab-config
+      - vrrp_virtual_ip: "192.168.100.202"
       - haproxy_listen_port: "38080"
       - kubernetes_version: '1.25'
 
