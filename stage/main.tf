@@ -49,7 +49,7 @@ module "proxmox_vm_r410" {
   ssh_user       = var.ssh_user                    # SSH user to use
   ciuser         = var.ssh_user
   ssh_keys       = [trimspace(file("~/.ssh/id_rsa.pub"))]
-  cores          = 4
+  cores          = 2
   memory         = 4096
   storage_pool   = "local-lvm"
   disk_size      = var.disk_size
@@ -73,7 +73,7 @@ module "proxmox_vm_ibm" {
   ssh_user       = var.ssh_user                    # SSH user to use
   ciuser         = var.ssh_user
   ssh_keys       = [trimspace(file("~/.ssh/id_rsa.pub"))]
-  cores          = 4
+  cores          = 2
   memory         = 4096
   storage_pool   = "local-lvm"
   disk_size      = var.disk_size
