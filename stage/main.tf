@@ -21,7 +21,7 @@ provider "proxmox" {
 }
 
 provider "proxmox" {
-  endpoint  = "https://ibm-x3200-prox1.local:8006/"
+  endpoint  = "https://ibm-x3200-prox1.lan:8006/"
   api_token = var.ibm_api_token # export TF_VAR_ibm_api_token
   insecure  = true
   alias     = "ibm"
