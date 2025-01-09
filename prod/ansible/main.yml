@@ -10,7 +10,8 @@
       - host_kubeconfig_dest: ~/.kube/prod-homelab-config
       - vrrp_virtual_ip: "192.168.100.202"
       - haproxy_listen_port: "38080"
-      - kubernetes_version: '1.25'
+      - kubernetes_version: '1.32'
+      - kubernetes_apt_keyring_file: "/etc/apt/keyrings/kubernetes.asc"
 
   pre_tasks:
     - name: Wait for /var/lib/dpkg/lock-frontend to be released 
